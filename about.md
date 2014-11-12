@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself. 
+I've been a software developer since '96 and have worked in a number of different industries. I'm now working at a University doing part-time development, part-time research.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+Contact me on twitter: [@adesbro](http://www.twitter.com/adesbro)
