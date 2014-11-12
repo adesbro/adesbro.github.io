@@ -5,7 +5,7 @@ title: New job. New blog.
 
 I've been working as a software developer for the best part of 20 years now and I've always had commercial realities impacting my work and the work that I really want to do - research! Well, by research I mean being able to experiment with various tools and frameworks to find a better way to do something. Time and money constraints generally keep this kind of thing confined to work at home.
 
-![_config.yml]({{ site.baseurl }}/images/uni_lake_thin.png)
+![Uni Lake]({{ site.baseurl }}/images/uni_lake_thin.png)
 
 Now I have been given a great opportunity to work with a group at a University that will allow me to do more of what I want to do. My job is part-time development and part-time research. I'll be enrolling as a student and my job will contribute towards a PhD. I might not be affected by the same commercial constraints, but I'll be doing a lot more writing and presenting. That's right, if I want to go to a conference I'll need to participate!
 
