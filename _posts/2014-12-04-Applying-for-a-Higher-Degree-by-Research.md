@@ -16,7 +16,9 @@ The CV is easy, already done. I actually started my research proposal in July! I
 * Finding a supervisor(s)
 * Finding a school/faculty!
 
-I have a Computer Science background and am working in Health Sciences. My field of research covers both disciplines. Where do I enroll? Initially I wanted to enroll with the School of Computing but for various reasons I really don't want to get into here it all became too hard. What I will say is when you are choosing supervisors:
+> I have a Computer Science background and am working in Health Sciences. My field of research covers both disciplines. Where do I enroll? 
+ 
+Initially I wanted to enroll with the School of Computing but for various reasons I really don't want to get into here it all became too hard. What I will say is when you are choosing supervisors:
 
 * Be confident that they are going to **do the right thing by you**
 * Make sure **they are interested** in the research topic
