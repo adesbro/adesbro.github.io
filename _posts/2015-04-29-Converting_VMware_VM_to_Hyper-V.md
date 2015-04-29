@@ -3,11 +3,20 @@ layout: post
 title: Converting a VMware virtual machine to Hyper-V
 ---
 
-I use VMware Workstation at work. I use Windows 7, I paid for Workstation a few years ago and it is pretty good. At home, I run Windows 8.1 and use Hyper-V (because I can, and it is already there). I wanted to copy my main development VM from work to use at home and I thought this would be easy. Hah!
+### tl;dr ###
 
-Well, it relatively straight forward, but I spent a lot of time bashing my head against the desk, perplexed as to why Hyper-V just doesn't import the damn thing and convert it!
+1. Download and install [Microsoft Virtual Machine Converter 3.0](https://www.microsoft.com/en-au/download/details.aspx?id=42497)
+2. Import MVMC module into PowerShell
+3. Convert individual VMDK hard drives to VHDX
+4. Create new Hyper-V virtual machine and attach existing VHDX 
 
-These steps allow you to convert the VM without requiring ESX or vCenter.
+### Why is it so hard? ###
+
+I use VMware Workstation at work, running on Windows 7. I paid for Workstation a few years ago as I was desperate for some features. I've been using it at work ever since out of habit and to be honest, it is pretty good. However, at home, I run Windows 8.1 and use Hyper-V (because I can, and it is already there). I wanted to copy my main development VM from work to use at home and I thought this would be easy. Hah!
+
+Well, it is relatively straight forward, but I spent a lot of time bashing my head against the desk, perplexed as to **why Hyper-V just doesn't import the damn thing and convert it!**
+
+These steps allow you to convert the VM without requiring ESX, ESXi or vCenter.
 
 ### 1. Download the virtual hard drive conversion tool ###
 
