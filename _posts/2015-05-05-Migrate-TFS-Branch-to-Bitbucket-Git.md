@@ -15,7 +15,7 @@ The second tool is a program called **git-tfs**. From the help:
 
 The [git-tfs GitHub](https://github.com/git-tfs/git-tfs) page has a lot of good documentation on how to use it, but for this migration we only need to use a small bit of functionality. [Download git-tfs from here](https://github.com/git-tfs/git-tfs/releases).
  
-Make sure that **git-tfs** and Git are both in your PATH environment variable so they are accessible from the command line.
+Make sure that **git-tfs** and Git are both in your `PATH` environment variable so they are accessible from the command line.
 
 ### Migration steps ###
 
@@ -31,7 +31,7 @@ Note that you **must** specify an actual branch in TFS, otherwise it will not wo
 
 The `--with-labels` options ensures that all version labels are brought across as Git Tags
 
-If, like me, you can adjust folder structure by moving folders around from the command line. For example:
+If, like me, you want to adjust the folder structure you can by moving folders around from the command line. For example:
 
 `git mv "./src/Subfolder/Subsubfolder/MyProject" ./src/`
 
