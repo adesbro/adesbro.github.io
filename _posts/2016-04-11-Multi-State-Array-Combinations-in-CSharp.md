@@ -3,7 +3,7 @@ layout: post
 title: Multi-State Array Combinations in C# 
 ---
 
-So, what do I mean exactly, by multi-state array combinations? Part of the work I am currently doing required me to calculate all possible combinations of a set of values of a fixed size, each value having three states. Each combination is effectively a fixed length array of tri-state values. In my case, the three states are 'Agree', 'Disagree' and 'Missing', with each position in the array representing a field within a dataset.
+So, what do I mean exactly by multi-state array combinations? Part of the work I am currently doing requires me to calculate all possible combinations of an array of values of a fixed size, each value having three states. Each combination is effectively a fixed length array of tri-state values. In my case, the three states are 'agree', 'disagree' and 'missing', with each position in the array representing a field within a dataset.
 
 For example, if there were three fields (name, age, gender) you would have combinations like:
 
@@ -20,7 +20,8 @@ This solution uses the [remainder theorem converting a number to a different bas
 
 OK, lets see some code. The function below does all the work and takes our two parameters, *s* and *n*. It returns a list of `int[]`, each representing a unique combination.    
 
-    private static IEnumerable<int[]> CalculateAllPossibleCombos(int numberOfStates, int numberOfElements)
+    private static IEnumerable<int[]> CalculateAllPossibleCombos(int numberOfStates, 
+	    int numberOfElements)
     {
       var numberOfCombinations = Math.Pow(numberOfStates, numberOfElements);
     
