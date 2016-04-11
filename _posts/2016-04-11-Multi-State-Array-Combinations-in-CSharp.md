@@ -20,93 +20,102 @@ This solution uses the [remainder theorem converting a number to a different bas
 
 OK, lets see some code. The function below does all the work and takes our two parameters, *s* and *n*. It returns a list of `int[]`, each representing a unique combination.    
 
-    private static IEnumerable<int[]> CalculateAllPossibleCombos(int numberOfStates, 
-	    int numberOfElements)
+```cs
+private static IEnumerable<int[]> CalculateAllPossibleCombos(int numberOfStates, int numberOfElements)
+{
+  var numberOfCombinations = Math.Pow(numberOfStates, numberOfElements);
+
+  for (var count = 0; count < numberOfCombinations; count++)
+  {
+    var combo = new int[numberOfElements];
+    int input = count;
+    int index = 0;
+
+    while (input != 0)
     {
-      var numberOfCombinations = Math.Pow(numberOfStates, numberOfElements);
-    
-      for (var count = 0; count < numberOfCombinations; count++)
-      {
-        var combo = new int[numberOfElements];
-        int input = count;
-        int index = 0;
-    
-        while (input != 0)
-        {
-          combo[index] = input % numberOfStates;
-          input /= numberOfStates;
-          index++;
-        }
-    
-        yield return combo;
-      }
+      combo[index] = input % numberOfStates;
+      input /= numberOfStates;
+      index++;
     }
+
+    yield return combo;
+  }
+}
+```
 
 If we call this with *s* = 2 and *n* = 4:
 
-    Console.WriteLine("Binary combos");
-    var binaryCombos2 = CalculateAllPossibleCombos(2, 4);
-    foreach (var combo in binaryCombos2)
-    {
-      Console.WriteLine(string.Join(" ", combo));
-    }
+```cs
+Console.WriteLine("Binary combos");
+var binaryCombos2 = CalculateAllPossibleCombos(2, 4);
+foreach (var combo in binaryCombos2)
+{
+  Console.WriteLine(string.Join(" ", combo));
+}
+```
 
 Results are:
 
-    Binary combos
-    0 0 0 0
-    1 0 0 0
-    0 1 0 0
-    1 1 0 0
-    0 0 1 0
-    1 0 1 0
-    0 1 1 0
-    1 1 1 0
-    0 0 0 1
-    1 0 0 1
-    0 1 0 1
-    1 1 0 1
-    0 0 1 1
-    1 0 1 1
-    0 1 1 1
-    1 1 1 1
+```
+Binary combos
+0 0 0 0
+1 0 0 0
+0 1 0 0
+1 1 0 0
+0 0 1 0
+1 0 1 0
+0 1 1 0
+1 1 1 0
+0 0 0 1
+1 0 0 1
+0 1 0 1
+1 1 0 1
+0 0 1 1
+1 0 1 1
+0 1 1 1
+1 1 1 1
+```
 
 If we call this with *s* = 3 and *n* = 4:
 
-	Console.WriteLine("Trinary combos");
-	var trinaryCombos = CalculateAllPossibleCombos(3, 4);
-	foreach (var combo in trinaryCombos)
-	{
-	    Console.WriteLine(string.Join(" ", combo));
-	}
+```cs
+Console.WriteLine("Trinary combos");
+var trinaryCombos = CalculateAllPossibleCombos(3, 4);
+foreach (var combo in trinaryCombos)
+{
+    Console.WriteLine(string.Join(" ", combo));
+}
+```
 
 Results are:
 
-    Trinary combos
-    0 0 0 0
-    1 0 0 0
-    2 0 0 0
-    0 1 0 0
-    1 1 0 0
-    2 1 0 0
-    0 2 0 0
-    1 2 0 0
-    2 2 0 0
-    0 0 1 0
-    1 0 1 0
-    2 0 1 0
-    0 1 1 0
-    1 1 1 0
-    2 1 1 0
-    0 2 1 0
-    1 2 1 0
-    2 2 1 0
-    0 0 2 0
-    1 0 2 0
-    2 0 2 0
-    0 1 2 0
-    1 1 2 0
-	...
-	<results truncated>
+```
+Trinary combos
+0 0 0 0
+1 0 0 0
+2 0 0 0
+0 1 0 0
+1 1 0 0
+2 1 0 0
+0 2 0 0
+1 2 0 0
+2 2 0 0
+0 0 1 0
+1 0 1 0
+2 0 1 0
+0 1 1 0
+1 1 1 0
+2 1 1 0
+0 2 1 0
+1 2 1 0
+2 2 1 0
+0 0 2 0
+1 0 2 0
+2 0 2 0
+0 1 2 0
+1 1 2 0
+...
+<results truncated>
+```
  
 It may not be the fastest solution, but I think this works pretty well and is easy to understand. 
